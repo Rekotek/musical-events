@@ -1,2 +1,20 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="md-col-6 md-offset-2">
+    <article class="event-item">
+        {{# each eventItems }}
+            <div class="row">
+                <div class="col-1">
+                <h2 class="title">{{ this.title }}</h2>
+                    <h4 class="description">{{ this.description }}</h4>
+                    <h5>{{ this.performerTitle }}</h5>
+                </div>
+                <div class="col-2">
+                    <h6><a href="{{ this.concertHall.addressUrl }}" target="_blank">{{ this.concertHall.title }}</a></h6>
+                    <div class="performance-date">{{dateFormat this.eventDate 'DD-MM-YYYY' }} {{dateFormat this.eventDate 'HH:mm' }}</div>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-default " type="button" title="Добавить в список">Добавить в список</button>
+                </div>
+            </div>
+        {{/each}}
+    </article>
+</div>

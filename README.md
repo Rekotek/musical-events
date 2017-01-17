@@ -15,17 +15,17 @@ git clone https://github/Rekotek/musical-events
 cd musical-events
 npm install
 ```
-5. Check parameters in **./app.js** (TODO: **./config/config.js**).
+5. Check parameters in **./config/config.js**.
 
-6. Correct file **./config/seed.js** and create first user for access:
+6. Correct file **./config/db-seeder.js** and create first user for access:
 
-`node ./config/seed.js`
+`node ./config/db-seeder.js`
 
 7. Launch the app:
 
 ```npm start```
 
-8. Login as user credentials mentioned at **seed.js** file and change the password.
+8. Login with the user credentials mentioned at **seed.js** file and change the password.
 
 ### How to use
 

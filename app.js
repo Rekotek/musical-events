@@ -5,15 +5,29 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
+var mongoose = require('mongoose');
+var moment = require('moment');
+
+var config = require('./config/config');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
+mongoose.connect(config.MONGO_HOST + ':' + config.MONGO_PORT + '/' + config.MONGO_DB_NAME);
+
 // view engine setup
-app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
-app.set('view engine', 'hbs');
+var hbs = expressHbs.create({
+  defaultLayout: 'layout',
+  extname: '.hbs',
+  helpers: {
+    dateFormat: function (date, format) {
+      return moment(date).format(format);}
+  }
+});
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));

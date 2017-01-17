@@ -1,0 +1,64 @@
+body {
+    margin: 5px;
+}
+
+h2.title {
+    color: rgb(97, 26, 16);
+    text-align: left;
+    padding: 0 0 0 0.5em;
+    margin-bottom: 0;
+}
+
+h4.description {
+    color: #575757;
+    font-size: 1.1em;
+}
+
+h5 {
+    font-style: italic;
+}
+
+.row {
+    box-shadow: 1px 1px 6px #ccc;
+    background-color: #eeeeee;
+    margin: 0 0 20px 0;
+    padding: 2px;
+}
+
+.performance-date {
+    font-family: Helvetica, SansSerif;
+    font-size: 1.1em;
+    font-weight: bold;
+    vertical-align: top;
+    padding-bottom: 2px;
+}
+
+.col-1 {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    vertical-align: top;
+    background-color: #eeeeee;
+    padding: 5px;
+}
+
+.col-2 {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    vertical-align: 50%;
+    background-color: #eeeeee;
+    padding: 25px 0 0 0;
+    cursor: pointer;
+}
+
+.col-3 {
+    display: inline-block;
+    width: 10%;
+}
+
+h6 {
+    font-size: 1em;
+    color: #575757;
+    text-align: center;
+}
